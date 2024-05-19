@@ -1,0 +1,18 @@
+graph TD;
+    Inicio --> A[Generar Solicitud de Compra]
+    A --> B[Enviar Solicitud para Aprobación]
+    B --> C[Revisar Solicitud]
+    C -->|Aprobada| D[Solicitar Cotizaciones a Proveedores]
+    C -->|Rechazada| E[Fin]
+    D --> F[Recibir Cotizaciones]
+    F --> G[Analizar Cotizaciones]
+    G --> H[Seleccionar Proveedor]
+    H --> I[Emitir Orden de Compra]
+    I --> J[Enviar Orden de Compra al Proveedor]
+    J --> K[Recibir Mercancías o Servicios]
+    K --> L[Inspeccionar Calidad]
+    L --> M[Recibir Factura]
+    M --> N[Verificar Factura con Orden de Compra y Recepción]
+    N --> O[Registrar Factura]
+    O --> P[Pagar Factura]
+    P --> Fin
